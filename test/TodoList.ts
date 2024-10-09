@@ -3,7 +3,7 @@ import { expect } from "chai";
 import hre from "hardhat";
 
 describe("TodoList Test", function () {
-  //re-useable async method for deployment
+
   async function deployTodoListFixture() {
     const [owner, otherAccount] = await hre.ethers.getSigners();
 
