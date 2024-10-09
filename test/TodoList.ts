@@ -62,6 +62,8 @@ describe("TodoList Test", function () {
       expect(await todolist.getTodo(0)).to.deep.equal([title, description, 2]);
     });
 
+  
+
     it("Should not be able to update todolist if not the owner", async function () {
       const { todolist, otherAccount } = await loadFixture(
         deployTodoListFixture
@@ -127,7 +129,7 @@ describe("TodoList Test", function () {
       expect(todos[2]).to.deep.equal([title3, description3, 1]); 
     });
 
-    it("Should be able to delete as todos as owner", async function () {
+    it("Should be able to delete  todos as owner", async function () {
         const { todolist, owner } = await loadFixture(deployTodoListFixture);
 
         const title = "Delete Sapa";
